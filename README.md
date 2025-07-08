@@ -379,7 +379,7 @@ npm test
 
 ## 🤝 Contributing
 
-We welcome contributions from the community! Here's how you can help:
+I welcome contributions from the community! Here's how you can help:
 
 1. **Fork the repository** and clone it locally
 2. **Create a feature branch**: `git checkout -b feature/amazing-feature`
