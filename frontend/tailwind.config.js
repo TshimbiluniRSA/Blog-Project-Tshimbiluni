@@ -6,8 +6,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#003366', // Sasol Blue
-        secondary: '#0099cc', // Sasol Light Blue
+        primary: '#003366', // Deep Navy Blue
+        secondary: '#0099cc', // Sky Blue
       },
     },
   },

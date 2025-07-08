@@ -334,8 +334,8 @@ docker-compose -f docker/docker-compose.yml build --no-cache
 
 ### Styling
 The application uses Tailwind CSS with custom color scheme:
-- Primary: `#003366` (Sasol Blue)
-- Secondary: `#0099cc` (Sasol Light Blue) 
+- Primary: `#003366` (Deep Navy Blue)
+- Secondary: `#0099cc` (Sky Blue) 
 - Tertiary: `#ff6600` (Orange accent)
 
 Modify colors in `frontend/tailwind.config.js`:

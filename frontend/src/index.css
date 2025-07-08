@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --primary-color: #003366; /* Sasol Blue */
-  --secondary-color: #0099cc; /* Sasol Light Blue */
+  --primary-color: #003366; /* Deep Navy Blue */
+  --secondary-color: #0099cc; /* Sky Blue */
   --background-color: #f4f4f4; /* Light background */
   --text-color: #333333; /* Dark text */
   --button-bg-color: #003366;
