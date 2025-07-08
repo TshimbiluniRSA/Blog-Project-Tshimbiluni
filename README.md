@@ -92,9 +92,12 @@ Blog-Project-Tshimbiluni/
 │   ├── package.json
 │   ├── vite.config.ts
 │   └── tailwind.config.js
-├── docker-compose.yml           # Multi-service orchestration
-├── dockerfile                   # Backend Dockerfile
-├── docker-setup.sh             # Quick Docker setup script
+├── docker/                      # Docker configuration files
+│   ├── docker-compose.yml      # Development environment
+│   ├── docker-compose.prod.yml # Production environment
+│   ├── dockerfile              # Backend Dockerfile
+│   ├── frontend.dockerfile     # Frontend Dockerfile
+│   └── docker-setup.sh         # Automated setup script
 └── README.md                   # This file
 ```
 
@@ -129,11 +132,11 @@ git clone https://github.com/TshimbiluniRSA/Blog-Project-Tshimbiluni.git
 cd Blog-Project-Tshimbiluni
 
 # 2️⃣ Quick setup with our script
-chmod +x docker-setup.sh
-./docker-setup.sh
+chmod +x docker/docker-setup.sh
+./docker/docker-setup.sh
 
 # 3️⃣ Or manually with docker-compose
-docker-compose up --build
+docker-compose -f docker/docker-compose.yml up --build
 ```
 
 **🎉 Access the application:**
@@ -312,19 +315,19 @@ npm test
 ### Docker Commands
 ```bash
 # Build and start services
-docker-compose up --build
+docker-compose -f docker/docker-compose.yml up --build
 
 # Start services in background
-docker-compose up -d
+docker-compose -f docker/docker-compose.yml up -d
 
 # Stop services
-docker-compose down
+docker-compose -f docker/docker-compose.yml down
 
 # View logs
-docker-compose logs
+docker-compose -f docker/docker-compose.yml logs
 
 # Rebuild containers
-docker-compose build --no-cache
+docker-compose -f docker/docker-compose.yml build --no-cache
 ```
 
 ## 🎨 Customization
@@ -400,7 +403,7 @@ git clone https://github.com/YOUR_USERNAME/Blog-Project-Tshimbiluni.git
 cd Blog-Project-Tshimbiluni
 
 # Set up the development environment
-./docker-setup.sh
+./docker/docker-setup.sh
 
 # Create a new feature branch
 git checkout -b feature/your-feature-name
@@ -423,8 +426,8 @@ sudo lsof -t -i tcp:5173 | xargs kill -9
 sudo chown -R $USER:$USER .
 
 # Reset Docker volumes
-docker-compose down -v
-docker-compose up --build
+docker-compose -f docker/docker-compose.yml down -v
+docker-compose -f docker/docker-compose.yml up --build
 ```
 
 **📦 Node modules issues:**

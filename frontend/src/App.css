@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+.home h1 {
+  margin-bottom: 1rem;
+}
+
+.home p {
+  margin-bottom: 1.5rem;
+}
+
+.home .space-x-4 > * {
+  margin-right: 1rem;
+}
+
+.home .space-x-4 > *:last-child {
+  margin-right: 0;
+}
+.bg-tertiary {
+  background-color: #4CAF50;
+}
